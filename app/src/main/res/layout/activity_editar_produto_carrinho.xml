@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarProdutoCarrinho"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtNomeItemEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome do Produto"
+        android:textSize="32dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/txtPrecoUnitItemEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preço Unitario"
+        android:textSize="32dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade de Produtos:"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/edtQtdProdItemEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade de Produtos"
+        android:textSize="32dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/txtPrecoTotalItemEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preço Total"
+        android:textSize="32dp"
+        android:layout_marginTop="15dp"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Voltar"
+            android:layout_marginLeft="20dp"
+            android:onClick="cancelaItemEdit"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Atualizar"
+            android:layout_marginLeft="20dp"
+            android:onClick="atualizaItemEdit"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Remover"
+            android:layout_marginLeft="20dp"
+            android:onClick="deletaItemEdit"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
