@@ -5,9 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Cadastro">
+    tools:context=".Cadastro"
+    android:background="@color/alpine">
 
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,6 +20,8 @@
         android:inputType="textPersonName" />
 
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,42 +31,53 @@
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/textSenha"
-        android:layout_marginTop="15dp"
+        android:textColor="@color/waiouru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Senha:" />
+        android:layout_marginTop="15dp"
+        android:text="Senha:" />
 
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="8"
         android:inputType="textPassword" />
+
     <TextView
-        android:id="@+id/textConfSenha"
+        android:textColor="@color/waiouru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Confirmação de Senha:" />
+
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtConfSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="8"
         android:inputType="textPassword" />
+
     <TextView
-        android:id="@+id/textCod"
+        android:textColor="@color/waiouru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Código de Cadastro:" />
+
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtCod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="8"
         android:inputType="textPassword" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

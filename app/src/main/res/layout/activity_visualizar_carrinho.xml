@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VisualizarCarrinho"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/alpine">
 
     <TextView
+        android:textColor="@color/waiouru"
         android:id="@+id/txtEmptyLvCarrinho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +26,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:textColor="@color/waiouru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Valor Total:"
@@ -31,6 +34,7 @@
             android:textSize="24sp"/>
 
         <TextView
+            android:textColor="@color/waiouru"
             android:id="@+id/txtValorCompra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

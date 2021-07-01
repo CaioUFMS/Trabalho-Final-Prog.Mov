@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FinalizarCompra"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/alpine">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,6 +14,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:textColor="@color/waiouru"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
@@ -21,6 +23,8 @@
             android:textSize="38dp"/>
 
         <TextView
+            android:textColor="@color/waiouru"
+            android:textColorHint="@color/waiouru"
             android:layout_marginTop="15dp"
             android:id="@+id/txtPrecoCompra"
             android:layout_width="wrap_content"
@@ -31,6 +35,7 @@
     </LinearLayout>
 
     <TextView
+        android:textColor="@color/waiouru"
         android:layout_marginTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,12 +43,14 @@
         android:textSize="30dp"/>
 
     <EditText
+        android:textColor="@color/waiouru"
         android:id="@+id/edtValorPago"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"/>
 
     <TextView
+        android:textColor="@color/waiouru"
         android:id="@+id/txtTroco"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"

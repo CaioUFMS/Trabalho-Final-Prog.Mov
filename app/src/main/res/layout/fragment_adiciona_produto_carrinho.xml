@@ -5,13 +5,14 @@
     android:layout_height="wrap_content"
     tools:context=".AdicionaProdutoCarrinho"
     android:layout_gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/waiouru">
 
 
     <TextView
         android:id="@+id/txtProdNome"
         android:text="Nome do produto"
-
+        android:textColor="@color/alpine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -24,6 +25,7 @@
 
         <TextView
             android:id="@+id/txtProdPreco"
+            android:textColor="@color/alpine"
             android:text=" R$: XX.XX"
             android:layout_marginLeft="15dp"
             android:layout_width="wrap_content"
@@ -34,6 +36,7 @@
 
         <TextView
             android:id="@+id/txtProdQtd"
+            android:textColor="@color/alpine"
             android:text=" Em estoque: XXX"
             android:layout_marginLeft="15dp"
             android:layout_width="wrap_content"
@@ -42,6 +45,8 @@
     </LinearLayout>
 
     <EditText
+        android:textColor="@color/alpine"
+        android:textColorHint="@color/alpine"
         android:id="@+id/edtQtdCarrinho"
         android:hint="Quantidade desejada:"
         android:layout_width="match_parent"

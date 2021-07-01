@@ -5,9 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EdicaoProduto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/alpine">
 
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtNomeProdutoEdicao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,6 +20,8 @@
         android:inputType="text"/>
 
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtPrecoEdicao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,6 +31,8 @@
         android:inputType="numberDecimal"/>
 
     <EditText
+        android:textColor="@color/waiouru"
+        android:textColorHint="@color/waiouru"
         android:id="@+id/edtQtdEdicao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
