@@ -66,7 +66,7 @@ public class RealizarVenda extends AppCompatActivity implements EditQtdDialogLis
                 Toast.makeText(this, qtdCarrinho + " unidades de " + prdName + " adicionadas", Toast.LENGTH_SHORT).show();
                 carrinho.addProdutos(new Produto(prdName, prdPrice, prdQtd, prdId), qtdCarrinho);
             }else{
-                Toast.makeText(this, "Insira uma quantidade diferente de zero!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Insira uma quantidade diferente de zero", Toast.LENGTH_SHORT).show();
             }
         }else{
             Toast.makeText(this, "Insira um valor", Toast.LENGTH_SHORT).show();

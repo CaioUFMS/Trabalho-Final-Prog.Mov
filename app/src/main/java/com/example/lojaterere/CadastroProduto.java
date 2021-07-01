@@ -28,20 +28,25 @@ public class CadastroProduto extends AppCompatActivity {
         String nome=edtNomeProduto.getText().toString();
 
         if(!nome.equals("") && !edtPreco.getText().toString().equals("") && !edtQtd.getText().toString().equals("")){
-            double preco=Double.parseDouble(edtPreco.getText().toString());
-            int qtd=Integer.parseInt(edtQtd.getText().toString());
+            if(Double.parseDouble(edtPreco.getText().toString()) != 0){
+                double preco=Double.parseDouble(edtPreco.getText().toString());
+                int qtd=Integer.parseInt(edtQtd.getText().toString());
 
-            Produto p = new Produto(nome, preco, qtd);
+                Produto p = new Produto(nome, preco, qtd);
 
-            helper.inserirProduto(p);
-            Toast toast=Toast.makeText(CadastroProduto.this,
-                    "Produto adicionado com sucesso!",Toast.LENGTH_SHORT);
-            toast.show();
-            limpar();
+                helper.inserirProduto(p);
+                Toast toast=Toast.makeText(CadastroProduto.this,
+                        "Produto adicionado com sucesso!",Toast.LENGTH_SHORT);
+                toast.show();
+                limpar();
+            }else{
+                Toast toast = Toast.makeText(CadastroProduto.this, "Insira um preço diferente de zero", Toast.LENGTH_SHORT);
+                edtPreco.setText("");
+                toast.show();
+            }
         }else{
             Toast toast = Toast.makeText(CadastroProduto.this, "Preencha todos os campos", Toast.LENGTH_SHORT);
             toast.show();
-            limpar();
         }
     }
 

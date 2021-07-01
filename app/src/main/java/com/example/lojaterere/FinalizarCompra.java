@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -42,19 +43,25 @@ public class FinalizarCompra extends AppCompatActivity {
     }
 
     public void calcularTroco(View v){
-        valorPago = Double.parseDouble(edtValorPago.getText().toString());
+        if(!edtValorPago.getText().toString().equals("")){
+            valorPago = Double.parseDouble(edtValorPago.getText().toString());
 
-        valorTroco = valorCompra - valorPago;
+            valorTroco = valorCompra - valorPago;
 
-        if (valorTroco > 0){
-            txtTroco.setText("Quantia insuficente!");
-        }else if(valorTroco == 0 ){
-            txtTroco.setText("O valor exato foi pago");
+            if (valorTroco > 0){
+                txtTroco.setText("Quantia insuficente");
+            }else if(valorTroco == 0 ){
+                txtTroco.setText("O valor exato foi pago");
+            }else{
+                valorTroco = (valorTroco * (-1));
+                DecimalFormat df = new DecimalFormat("#.##");
+                String troco = "Troco: R$" + df.format(valorTroco);
+                txtTroco.setText(troco);
+            }
         }else{
-            valorTroco = (valorTroco * (-1));
-            DecimalFormat df = new DecimalFormat("#.##");
-            String troco = "Troco: R$" + df.format(valorTroco);
-            txtTroco.setText(troco);
+            Toast toast=Toast.makeText(FinalizarCompra.this,
+                    "Insira um valor",Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 

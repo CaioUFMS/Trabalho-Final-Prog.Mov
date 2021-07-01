@@ -39,7 +39,7 @@ public class Cadastro extends AppCompatActivity {
                 !confSenha.equals("") && !codigoCadastro.equals("")){
             if(!helper.buscarUsuario(usr)){
                 if(!senha.equals(confSenha)){
-                    Toast toast=Toast.makeText(Cadastro.this, "Senha difere da confirmação de senha!",Toast.LENGTH_SHORT);
+                    Toast toast=Toast.makeText(Cadastro.this, "Senha difere da confirmação de senha",Toast.LENGTH_SHORT);
                     toast.show();
                     edtSenha.setText("");
                     edtConfSenha.setText("");
@@ -80,7 +80,6 @@ public class Cadastro extends AppCompatActivity {
         }else{
             Toast toast = Toast.makeText(Cadastro.this, "Preencha todos os campos", Toast.LENGTH_SHORT);
             toast.show();
-            limpar();
         }
     }
 

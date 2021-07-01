@@ -54,18 +54,29 @@ public class EditarProdutoCarrinho extends AppCompatActivity {
     }
 
     public void atualizaItemEdit(View v){
-        int novoValor = Integer.parseInt(edtQtdProdItemEdit.getText().toString());
+        if(!edtQtdProdItemEdit.getText().toString().equals("")){
+            int novoValor = Integer.parseInt(edtQtdProdItemEdit.getText().toString());
 
-        if (novoValor == carrinho.getProdutos().get(editPos).getQuantidadeProduto()){
-            Toast toast=Toast.makeText(EditarProdutoCarrinho.this,
-                    "Quantidade não alterada!",Toast.LENGTH_SHORT);
-            toast.show();
+            if (novoValor == carrinho.getProdutos().get(editPos).getQuantidadeProduto()){
+                Toast toast=Toast.makeText(EditarProdutoCarrinho.this,
+                        "Quantidade não alterada",Toast.LENGTH_SHORT);
+                toast.show();
+            }else if(novoValor != 0){
+                carrinho.getProdutos().get(editPos).setQuantidadeProduto(novoValor);
+                Toast toast=Toast.makeText(EditarProdutoCarrinho.this,
+                        "Quantidade alterada com sucesso!",Toast.LENGTH_SHORT);
+                toast.show();
+                txtPrecoTotalItemEdit.setText(Double.toString(carrinho.getProdutos().get(editPos).getPreco()));
+            }else{
+                Toast toast=Toast.makeText(EditarProdutoCarrinho.this,
+                        "Insira um valor diferente de zero",Toast.LENGTH_SHORT);
+                toast.show();
+                edtQtdProdItemEdit.setText("");
+            }
         }else{
-            carrinho.getProdutos().get(editPos).setQuantidadeProduto(novoValor);
             Toast toast=Toast.makeText(EditarProdutoCarrinho.this,
-                    "Quantidade alterada com sucesso!",Toast.LENGTH_SHORT);
+                    "Insira um valor",Toast.LENGTH_SHORT);
             toast.show();
-            txtPrecoTotalItemEdit.setText(Double.toString(carrinho.getProdutos().get(editPos).getPreco()));
         }
     }
 
